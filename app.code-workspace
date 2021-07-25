@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "factory"
+		},
+		{
+			"path": "object-pool"
 		}
 	],
 	"settings": {}
