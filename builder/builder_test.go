@@ -1,11 +1,10 @@
-package main
+package builder
 
 import (
-	"builder/car"
-	"builder/notification"
+	"testing"
 )
 
-func main() {
+func Test_builder(t *testing.T) {
 	/*
 		- 設計前提
 			- 需要知道物件的主體
@@ -23,8 +22,8 @@ func main() {
 			- 建立該物件的 interface
 			- 設定該物件的 new method, 回傳 interface
 	*/
-	car.NewCar().SetColor(car.RedColor).SetLight(car.Funture).SetWheel(car.RaceWheel).Build()
-	car.NewCar().Build()
+	NewCar().SetColor(RedColor).SetLight(Funture).SetWheel(RaceWheel).Build()
+	NewCar().Build()
 	//
-	notification.NewNotification().SetTitle(notification.InfoTitle).SetBody(notification.InfoBody).Send()
+	NewNotification().SetTitle(InfoTitle).SetBody(InfoBody).Send()
 }

@@ -1,4 +1,4 @@
-package notification
+package builder
 
 import "errors"
 

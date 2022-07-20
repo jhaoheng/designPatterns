@@ -1,4 +1,4 @@
-package main
+package singleton
 
 import (
 	"fmt"
@@ -13,14 +13,6 @@ import (
 # Rule of thumb
 - 因為是全局的資源, 大多數情況下會降低可測試性
 */
-
-func main() {
-	s := NewSingleton()
-	s["this"] = "that"
-
-	s2 := NewSingleton()
-	fmt.Println(s2["this"])
-}
 
 type Singleton map[string]string
 
