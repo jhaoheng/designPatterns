@@ -1,4 +1,4 @@
-# factory
+# factory method
 > https://github.com/tmrts/go-patterns/blob/master/creational/factory.md
 
 ## 目的

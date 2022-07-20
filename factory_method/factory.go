@@ -1,4 +1,4 @@
-package factory
+package factorymethod
 
 import "fmt"
 
