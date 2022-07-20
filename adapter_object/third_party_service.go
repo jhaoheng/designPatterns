@@ -8,14 +8,21 @@ import "fmt"
 
 type IThirdParty interface {
 	DoSomething()
+	SetData(data string)
 }
 
-type ThirdParty struct{}
+type ThirdParty struct {
+	Data string
+}
 
 func NewThirdParty() IThirdParty {
 	return &ThirdParty{}
 }
 
+func (tp *ThirdParty) SetData(data string) {
+	tp.Data = data
+}
+
 func (tp *ThirdParty) DoSomething() {
-	fmt.Println("3rd do something")
+	fmt.Println(tp.Data)
 }

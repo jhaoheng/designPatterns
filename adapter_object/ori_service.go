@@ -4,12 +4,12 @@ import "fmt"
 
 type IService interface {
 	ConnectDB()
-	SetXMLData()
-	GetXMLData()
+	SetData()
 }
 
 type Service struct {
 	Adapter Adapter
+	MyData  string
 }
 
 func NewService() *Service {
@@ -17,13 +17,9 @@ func NewService() *Service {
 }
 
 func (s *Service) ConnectDB() {
-	fmt.Println("connection service_1")
+	fmt.Println("connection service")
 }
 
-func (s *Service) GetXMLData() {
-	fmt.Println("get xml data")
-}
-
-func (s *Service) SetXMLData() {
-	fmt.Println("set xml data")
+func (s *Service) SetData() {
+	s.MyData = "data"
 }
